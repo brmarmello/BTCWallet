@@ -16,3 +16,7 @@ const path = `m/49'/1'/0'/0`
 //criando o mnemonic para a seed (palavras de senha)
 let mnemonic = bip39.generateMnemonic()
 const seed = bip39.mnemonicToSeedSync(mnemonic)
+
+//criando a raiz da cartiera HD
+let root = bip32.fromSeed(seed, network)
+
